@@ -14,7 +14,7 @@ class GithubViewModel: ObservableObject {
     
     var service = GithubService.instance
     
-    func fetchRepository() async {
+    func fetchService() async {
         do {
             let response: GithubRepoResponse = try await service.githubRepoService(url: .repo)
             repo = response

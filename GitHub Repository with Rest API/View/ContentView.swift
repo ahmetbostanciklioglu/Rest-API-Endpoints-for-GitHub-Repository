@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Observable viewModel object created
     @StateObject private var viewModel = GithubViewModel()
     
     var body: some View {
@@ -47,7 +48,7 @@ struct ContentView: View {
                 }
             }
             .task {
-                await viewModel.fetchRepository()
+                await viewModel.fetchService()
             }
         }
     }
